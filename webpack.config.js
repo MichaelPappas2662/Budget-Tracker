@@ -9,6 +9,18 @@ const config = {
       publicPath: "",
     },
     mode: "production",
+    module: {
+      rules: [{
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      }]
+    },
     plugins: [
       new WebpackPwaManifest({
         filename: "manifest.json",
@@ -27,7 +39,7 @@ const config = {
           {
             src: path.resolve(
               __dirname,
-              "public/icons/icon-512x512.png"
+              "public/images/icons/icon-512x512.png"
               ),
             size: [32, 64, 128, 256, 512],
           }

@@ -31,6 +31,9 @@
     "webpack": "^5.43.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^4.7.2",
-    "webpack-pwa-manifest": "^4.3.0"
+    "webpack-pwa-manifest": "^4.3.0",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6"
   }
 }
